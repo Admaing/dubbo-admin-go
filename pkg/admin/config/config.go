@@ -33,7 +33,7 @@ import (
 	"strings"
 )
 
-const conf = "./conf/dubboadmin.yml"
+const conf = "D:\\Prj\\dubbo\\dubbo-latest\\dubbo-admin-go\\deploy\\admin\\conf\\dubboadmin.yml"
 
 type Config struct {
 	Admin Admin `yaml:"admin"`
