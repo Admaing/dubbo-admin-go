@@ -27,16 +27,14 @@ func InitRouter() *gin.Engine {
 
 	router.GET("/api/dev/services", handlers.AllServices)
 	router.GET("/api/dev/service", handlers.SearchService)
-	override := router.Group("/api/{env}/rules/override")
-	{
-		override.POST("/", handlers.CreateOverride)
-		override.PUT("/{id}", handlers.UpdateOverride)
-		override.GET("/", handlers.SearchOverride)
-		//TODO deleteOverride
-		override.GET("/{id}", handlers.DetailOverride)
-		override.GET("/enable/{id}", handlers.EnableRoute)
-		override.PUT("/disable/{id}", handlers.DisableRoute)
+	override := router.Group("/api/env/rules/override")
+	override.POST("/create", handlers.CreateOverride)
+	//override.PUT("/{id}", handlers.UpdateOverride)
+	//override.GET("/", handlers.SearchOverride)
+	////TODO deleteOverride
+	//override.GET("/{id}", handlers.DetailOverride)
+	//override.GET("/enable/{id}", handlers.EnableRoute)
+	//override.PUT("/disable/{id}", handlers.DisableRoute)
 
-	}
 	return router
 }
