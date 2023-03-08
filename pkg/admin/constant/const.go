@@ -17,6 +17,10 @@
 
 package constant
 
+import (
+	set "github.com/dubbogo/gost/container/set"
+)
+
 const (
 	DubboPropertyKey         = "dubbo.properties"
 	RegistryAddressKey       = "dubbo.registry.address"
@@ -49,7 +53,12 @@ const (
 	TimeoutKey            = "timeout"
 	DefaultTimeout        = 1000
 	WeightKey             = "weight"
+	BalancingKey          = "balancing"
 	DefaultWeight         = 100
 	OwnerKey              = "owner"
 	Service               = "service"
+)
+
+var (
+	Configs = set.NewSet(WeightKey, BalancingKey)
 )
