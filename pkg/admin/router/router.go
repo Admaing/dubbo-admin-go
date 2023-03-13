@@ -35,7 +35,7 @@ func InitRouter() *gin.Engine {
 		override.GET("/:id", handlers.DetailOverride)
 		override.PUT("/enable/:id", handlers.EnableOverride)
 		override.PUT("/disable/:id", handlers.DisableOverride)
-		override.PUT("/:id:", handlers.UpdateOverride)
+		override.PUT("/:id", handlers.UpdateOverride)
 	}
 	return router
 }
