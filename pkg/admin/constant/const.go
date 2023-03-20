@@ -39,6 +39,7 @@ const (
 	ConsumersCategory     = "consumers"
 	RoutersCategory       = "routers"
 	ConfiguratorsCategory = "configurators"
+	ConfiguratorRuleSuffix = ".configurators"
 	EnabledKey            = "enabled"
 	CheckKey              = "check"
 	AdminProtocol         = "admin"
